@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.developer.angrynotes.NoteEditor"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryLight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cl">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/header">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:id="@+id/imageView"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/material_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/edit_or_write_note_header"
+                    android:id="@+id/textViewForNoteHeader"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_below="@+id/imageView"
+                    android:layout_alignLeft="@+id/title" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Как вычислить по IP"
+                    android:id="@+id/noteHeader"
+                    android:textColor="@color/colorPrimaryText"
+                    android:layout_below="@+id/textViewForNoteHeader"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:background="@color/colorTextIcons"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/edit_or_write_note_text"
+                    android:id="@+id/textViewForNoteText"
+                    android:textColor="@color/colorSecondaryText"
+                    android:layout_below="@+id/noteHeader"
+                    android:layout_alignLeft="@+id/title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:id="@+id/title"
+                    android:textColor="@color/colorTextIcons"
+                    android:textSize="36sp"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginTop="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtitle"
+                    android:id="@+id/subTitle"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginTop="64dp" />
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_edit_scrolling" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            app:layout_anchor="@+id/imageView"
+            app:layout_anchorGravity="bottom|end"
+            android:src="@drawable/saveicon"
+            android:onClick="onFABClick" />
+
+    </android.support.design.widget.CoordinatorLayout>

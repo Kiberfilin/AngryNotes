@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.developer.angrynotes.MainScreenActivity"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimaryLight">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="248dp"
+        android:layout_height="match_parent"
+        android:id="@+id/cl">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context="com.example.developer.angrynotes.MainScreenActivity"
+                android:background="@color/colorPrimaryLight"
+                android:id="@+id/header">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:id="@+id/imageView"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/material_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:id="@+id/title"
+                    android:textColor="@color/colorTextIcons"
+                    android:textSize="36sp"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginTop="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtitle"
+                    android:id="@+id/subTitle"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginTop="64dp" />
+
+            </RelativeLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            app:layout_anchor="@+id/imageView"
+            app:layout_anchorGravity="bottom|end"
+            android:src="@drawable/addicon"
+            android:onClick="onFABClick" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list_of_notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_toRightOf="@+id/cl"
+        android:layout_marginTop="32dp">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/notes_subtitle"
+        android:id="@+id/textViewForNoteHeader"
+        android:textColor="@color/colorSecondaryText"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/cl"
+        android:layout_toEndOf="@+id/cl"
+        android:paddingLeft="8dp" />
+
+</RelativeLayout>

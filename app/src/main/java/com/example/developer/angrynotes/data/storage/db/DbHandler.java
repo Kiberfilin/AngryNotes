@@ -1,4 +1,4 @@
-package com.example.developer.angrynotes;
+package com.example.developer.angrynotes.data.storage.db;
 
 
 import android.content.ContentValues;
@@ -6,6 +6,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.developer.angrynotes.data.storage.models.Note;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.developer.angrynotes;
+package com.example.developer.angrynotes.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.developer.angrynotes.R;
+import com.example.developer.angrynotes.data.storage.db.DbHandler;
 
 /**
  * Created by Developer on 16.06.2016.

@@ -1,7 +1,9 @@
-package com.example.developer.angrynotes;
+package com.example.developer.angrynotes.utils.helps;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.example.developer.angrynotes.R;
 
 public class ItemClickSupport {
     private final RecyclerView mRecyclerView;

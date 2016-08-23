@@ -1,4 +1,4 @@
-package com.example.developer.angrynotes;
+package com.example.developer.angrynotes.data.storage.models;
 
 /**
  * Created by Developer on 13.06.2016.

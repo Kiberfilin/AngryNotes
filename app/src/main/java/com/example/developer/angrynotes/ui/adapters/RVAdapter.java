@@ -1,9 +1,12 @@
-package com.example.developer.angrynotes;
+package com.example.developer.angrynotes.ui.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.developer.angrynotes.R;
+import com.example.developer.angrynotes.data.storage.models.Note;
 
 import java.util.List;
 
@@ -12,7 +15,7 @@ import java.util.List;
  */
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.NoteViewHolder> {
 
-    List<Note> notes;
+    public List<Note> notes;
 
     public class NoteViewHolder extends RecyclerView.ViewHolder {
         TextView noteTitle;

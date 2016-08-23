@@ -1,4 +1,4 @@
-package com.example.developer.angrynotes;
+package com.example.developer.angrynotes.ui.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.developer.angrynotes.utils.helps.ItemClickSupport;
+import com.example.developer.angrynotes.R;
+import com.example.developer.angrynotes.ui.adapters.RVAdapter;
+import com.example.developer.angrynotes.data.storage.db.DbHandler;
+import com.example.developer.angrynotes.data.storage.models.Note;
+
 import java.util.ArrayList;
 import java.util.List;
 
